@@ -14,6 +14,7 @@ RSpec.describe "Posts", type: :request do
   end
 
   describe "with data in the DB" do
+    #{ create_list(:post, 10, published: true) } esta es la parte de factory boot
     let!(:posts) { create_list(:post, 10, published: true) }
 
     it "should return all the published posts" do
